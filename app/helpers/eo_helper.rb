@@ -1,0 +1,2 @@
+module EoHelper
+end
