@@ -1,7 +1,6 @@
 .main_message
-  .main_message__header
-    .main_message__header__a
-    .main_message__header__b
-    -#   follow me!
-    -# =link_to "https://www.facebook.com/", class: "contents__btn" do
-  .main_message__content
+  .form
+    %form.main_message__form__header
+      %input{type:'text', class:'text', placeholder:'type a message'}
+      %input{type:'submit', class:'submit-btn'}
+      %input{type:'text_area', class:'message-text', placeholder:'type a message'}
