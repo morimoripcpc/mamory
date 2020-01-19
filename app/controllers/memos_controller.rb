@@ -2,6 +2,7 @@ class MemosController < ApplicationController
 
   def index
     @memos = Memo.all
+    @memo = Memo.new
   end
 
   def new
@@ -37,4 +38,5 @@ class MemosController < ApplicationController
   def memo_params
     params.require(:memo).permit(:title, :content)
   end
+
 end

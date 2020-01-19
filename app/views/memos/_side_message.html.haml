@@ -1,3 +1,9 @@
 .side_message
   .side_message__header
-    = icon('fas', 'cog', class: 'strong')
+    +
+  .side_message__content
+    -memos.each do |memo|
+      .memo
+        = link_to memo_titles_path(memo) do
+          .memo_title
+            = memo.show_title
