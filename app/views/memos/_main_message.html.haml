@@ -1,6 +1,12 @@
 .main_message
   .form
-    %form.main_message__form__header
-      %input{type:'text', class:'text', placeholder:'type a message'}
-      %input{type:'submit', class:'submit-btn'}
-      %input{type:'text_area', class:'message-text', placeholder:'type a message'}
+    = form_for @memo do |f|
+      = f.text_area :content, class: 'message-text', placeholder: '本文'
+      .form_form
+        = f.text_field :title, class:'text', placeholder: '題名'
+        .form_form_form
+          = f.submit '保存', class: 'submit-btn'
+          .sukujo
+            削除
+          
+  
